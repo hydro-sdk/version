@@ -108,6 +108,17 @@ class Version implements Comparable<Version> {
   /// Also clears the [build] and [preRelease] information.
   Version incrementPatch() => Version(this.major, this.minor, this.patch + 1);
 
+  String leadingPreRelease() =>
+      (_preRelease?.isNotEmpty ?? false) ? _preRelease[0] : "";
+
+  int numericPrelease() =>
+      hasNumericPreRelease() ? int.tryParse(_preRelease[1]) : -1;
+
+  bool hasNumericPreRelease() =>
+      leadingPreRelease().isNotEmpty &&
+      _preRelease.length == 2 &&
+      int.tryParse(_preRelease[1]) >= 0;
+
   /// Returns a [String] representation of the [Version].
   ///
   /// Uses the format "$major.$minor.$patch".

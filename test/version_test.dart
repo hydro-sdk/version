@@ -36,7 +36,6 @@ void main() {
     expect(fiveZeroFive == zeroZeroZero, isFalse);
     expect(zeroZeroZero == zeroZeroZero, isTrue);
 
-
     expect(zeroZeroOne == zeroOneZero, isFalse);
     expect(zeroZeroOne == oneZeroZero, isFalse);
     expect(zeroOneZero == oneZeroZero, isFalse);
@@ -63,7 +62,6 @@ void main() {
     expect(zeroZeroZero > zeroOneZero, isFalse);
     expect(zeroZeroZero > oneZeroZero, isFalse);
     expect(zeroZeroZero > zeroZeroZero, isFalse);
-
 
     expect(zeroZeroOne > zeroOneZero, isFalse);
     expect(zeroZeroOne > oneZeroZero, isFalse);
@@ -405,5 +403,17 @@ void main() {
     expect(versionOne.hashCode != versionTwo.hashCode, isTrue);
     expect(versionTwo.hashCode != versionThree.hashCode, isTrue);
     expect(versionOne.hashCode != versionThree.hashCode, isTrue);
+  });
+
+  test("numeric prereleases", () {
+    var nightly = Version(0, 0, 0, preRelease: ["nightly"]);
+    expect(nightly.leadingPreRelease(), "nightly");
+    expect(nightly.hasNumericPreRelease(), false);
+    expect(nightly.numericPrelease(), -1);
+
+    var nightly1 = Version(0, 0, 0, preRelease: ["nightly", "1"]);
+    expect(nightly1.leadingPreRelease(), "nightly");
+    expect(nightly1.hasNumericPreRelease(), true);
+    expect(nightly1.numericPrelease(), 1);
   });
 }
