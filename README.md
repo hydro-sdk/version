@@ -3,6 +3,8 @@
 ![Dart CI](https://github.com/dartninja/version/workflows/Dart%20CI/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/dartninja/version/badge.svg?branch=master)](https://coveralls.io/github/dartninja/version?branch=master)
 
+Forked to support numeric pre-releases.
+
 A dart library providing a Version object for comparing and incrementing version numbers in compliance with the Semantic Versioning spec at http://semver.org/
 
 This is in contrast to [pub_semver][pub_semver], which is close to the spec but diverts in a few specific ways.
