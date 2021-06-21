@@ -1,8 +1,9 @@
+//@dart = 2.9
 // Copyright (c) 2017, Matthew Barbour. All rights reserved. Use of this source code
 // is governed by a BSD-style license that can be found in the LICENSE file.
 
 import 'package:test/test.dart';
-import 'package:version/version.dart';
+import 'package:hydro_sdk_version/version.dart';
 
 void main() {
   Version zeroZeroZero,

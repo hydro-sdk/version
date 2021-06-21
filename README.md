@@ -23,7 +23,7 @@ dependencies:
 
 A simple usage example:
 
-    import 'package:version/version.dart';
+    import 'package:hydro_sdk_version/version.dart';
     
     void main() {
       Version currentVersion = new Version(1, 0, 3);
