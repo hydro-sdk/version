@@ -1,6 +1,6 @@
 name: hydro_sdk_version
 description: Provides a simple class for parsing and comparing semantic versions as defined by http://semver.org/
-version: 1.2.0
+version: 1.2.1
 
 environment:
   sdk: '>=2.12.0 <3.0.0'
